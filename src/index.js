@@ -7,10 +7,11 @@ import VideoList from './components/video_list';
 
 const API_KEY = 'AIzaSyCwKEBgijUSS9oMS15ui9kC9bbnTseXYkA';
 
+// YTSearch({Key: API_KEY, term: 'surfboards'}, function(data)
+// {
+//     console.log(data);
+// });
 
-
-//Create a new component . This component should produce
-//some HTML
 
 class App extends Component {
     constructor(props){
@@ -20,6 +21,8 @@ class App extends Component {
 
     YTSearch({key: API_KEY, term: 'surfborads'}, (videos) => {
         this.setState({videos});
+        //this.setState({videos:videos});
+
         });   
 
     }
@@ -33,7 +36,8 @@ class App extends Component {
     }
 }
 
-
-//Take this component's generated  HTML and put it on the page (in the DOM)
-
 ReactDom.render(<App />, document.querySelector('.container') );
+
+// if (module.hot){
+//     module.hot.accept();
+// }
